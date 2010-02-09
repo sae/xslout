@@ -282,22 +282,6 @@ public class XslResponseProcessor implements Serializable {
     }
 
     private Document getResultXML(Document xml, String xsl) throws Exception{
-        /* перенесены в kz.homebank....
-        Element root=xml.getRootElement();
-        //ошибка, если есть
-        String errorTxt=(String)session.getAttribute("error_txt");
-        if (errorTxt!=null) root.addElement("error").addElement("message").addText(errorTxt);
-        session.removeAttribute("error_txt");
-        //сообщение, если есть
-        String infoTxt=(String)session.getAttribute("info_txt");
-        if (infoTxt!=null) root.addElement("info").addElement("message").addText(infoTxt);
-        session.removeAttribute("info_txt");
-
-        root.addAttribute("root", this.root);
-        //стиль должен знать где лежат его ресурсы, чтобы строить правильные ссылки
-        root.addAttribute("skinroot", this.root+skin);
-        root.addAttribute("lang", lang);
-*/
         //строим выходной xhtml
         xml=XmlTransformer.parseDOM(xml,xsl);
 
