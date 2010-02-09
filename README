@@ -1,0 +1,6 @@
+Simple xsl engine for tomcat.
+
+Required libraries (version is not critical):
+* dom4j-1.6.1.jar
+* fop.jar
+* log4j-1.2.11.jar
